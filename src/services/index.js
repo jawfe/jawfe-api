@@ -1,5 +1,37 @@
 const users = require('./users/users.service.js');
+const tenants = require('./tenants/tenants.service.js');
+const intergrations = require('./intergrations/intergrations.service.js');
+const deployments = require('./deployments/deployments.service.js');
+const managedResources = require('./managed-resources/managed-resources.service.js');
+const actions = require('./actions/actions.service.js');
+const variables = require('./variables/variables.service.js');
+const catalogItems = require('./catalog-items/catalog-items.service.js');
+const tags = require('./tags/tags.service.js');
+const blueprints = require('./blueprints/blueprints.service.js');
+const workflows = require('./workflows/workflows.service.js');
+const requests = require('./requests/requests.service.js');
+const notifications = require('./notifications/notifications.service.js');
+const tasks = require('./tasks/tasks.service.js');
+const auditLogs = require('./audit-logs/audit-logs.service.js');
+const logs = require('./logs/logs.service.js');
+const settings = require('./settings/settings.service.js');
 // eslint-disable-next-line no-unused-vars
 module.exports = function (app) {
   app.configure(users);
+  app.configure(tenants);
+  app.configure(intergrations);
+  app.configure(deployments);
+  app.configure(managedResources);
+  app.configure(actions);
+  app.configure(variables);
+  app.configure(catalogItems);
+  app.configure(tags);
+  app.configure(blueprints);
+  app.configure(workflows);
+  app.configure(requests);
+  app.configure(notifications);
+  app.configure(tasks);
+  app.configure(auditLogs);
+  app.configure(logs);
+  app.configure(settings);
 };
