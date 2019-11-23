@@ -15,6 +15,8 @@ const tasks = require('./tasks/tasks.service.js');
 const auditLogs = require('./audit-logs/audit-logs.service.js');
 const logs = require('./logs/logs.service.js');
 const settings = require('./settings/settings.service.js');
+const events = require('./events/events.service.js');
+const actionTypes = require('./action-types/action-types.service.js');
 // eslint-disable-next-line no-unused-vars
 module.exports = function (app) {
   app.configure(users);
@@ -34,4 +36,6 @@ module.exports = function (app) {
   app.configure(auditLogs);
   app.configure(logs);
   app.configure(settings);
+  app.configure(events);
+  app.configure(actionTypes);
 };
